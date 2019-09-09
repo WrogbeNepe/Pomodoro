@@ -17,7 +17,7 @@ class Pomodoro extends React.Component {
     this.updateTime = this.updateTime.bind(this);
   }
 
-  //
+  
   updateTime() {
     this.setState(function(prevState, props) {
       const currentState = Object.assign(prevState);
@@ -33,7 +33,7 @@ class Pomodoro extends React.Component {
     });
   }
 
-  //
+  
   playStop() {
       if (this.state.timerId) {
         clearInterval(this.state.timerId);
@@ -46,7 +46,7 @@ class Pomodoro extends React.Component {
 
       this.timerID = setInterval(() => this.updateTime(), 1000)
     }
-    //
+    
   updateLength(timer, e) {
     if (this.state.timerId) {
       return false;
